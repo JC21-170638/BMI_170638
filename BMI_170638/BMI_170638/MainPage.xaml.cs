@@ -17,5 +17,28 @@ namespace BMI_170638
         {
             InitializeComponent();
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            string Result = "";
+            String Tm = hei.Text;
+            String Hu = wei.Text;
+
+
+
+            double height = double.Parse(Tm);
+            double weight = double.Parse(Hu);
+
+            height = height * 0.01;
+
+            double BMI;
+            BMI = weight / (height * height);
+
+            double ret1 = Math.Floor(BMI);
+
+            Result = ret1.ToString();
+
+            Resu.Text = Result;
+        }
     }
 }
